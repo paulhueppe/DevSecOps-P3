@@ -134,6 +134,19 @@
                   "new": false,
                   "number": 115,
                   "score": ""
+                },
+                {
+                  "id": "df87bf93-3b06-4f25-81d1-3391fc453973",
+                  "title": "Fuzzing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Login gibt zu detailierte Fehlermeldungen zurück und erlaubt es zB Nutzernamen zu validieren\nCAPEC-28: Fuzzing",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 120,
+                  "score": ""
                 }
               ],
               "hasOpenThreats": true,
@@ -436,6 +449,14 @@
               "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
             },
             "vertices": [
+              {
+                "x": 200,
+                "y": 39
+              },
+              {
+                "x": 220,
+                "y": 40
+              },
               {
                 "x": 237,
                 "y": 39
@@ -1750,8 +1771,8 @@
                 "text": "Management\n"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1766,8 +1787,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "providesAuthentication": false,
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "c26ab432-0d8d-4f6e-b2b8-60413e9d2c86",
+                  "title": "Social engineering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Zugang zum Management Postfach lässt alle Log daten raw einsehen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 121,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1897,7 +1932,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 119
+    "threatTop": 121
   },
   "version": "2.1.1"
 }
