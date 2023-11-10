@@ -92,8 +92,8 @@
                 "text": "Login System -\nWebapp +\nMobile App"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -112,11 +112,11 @@
                 {
                   "id": "6ebee8c2-5966-420d-9cc6-c3693d5cdada",
                   "title": "DDoS",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Denial of service",
                   "description": "Ein Akteur kann durch übermäßige Anfragen das Login System zum erliegen bringen.\nCAPEC-482: TCP Flood\nT1499: Endpoint Denial of Service\nD9, R9, E10, A10, D1",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Cloudflare DDoS Protection.\nD3-NTF Network traffic filtering\nD4, R3, E3, A5, D1",
                   "modelType": "Generic",
                   "new": false,
                   "number": 112,
@@ -125,24 +125,24 @@
                 {
                   "id": "629cfdb5-e766-4abe-817b-ab9182fda676",
                   "title": "Cookie spoofing",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Spoofing",
-                  "description": "cookie abfangen und sich dann als der authenifizierte Nutzer ausgeben. Session ist 1 Jahr gültig\nCAPEC-31: HTTP Cookie\nT1539: Steal web session cookie",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "cookie abfangen und sich dann als der authenifizierte Nutzer ausgeben. Session ist 1 Jahr gültig\nCAPEC-31: HTTP Cookie\nT1539: Steal web session cookie\nD10,R8,E8, A10, D10",
+                  "mitigation": "Limited Lifetime of tokens\nM1054\tSoftware Configuration\t\nConfigure browsers or tasks to regularly delete persistent cookies.\nD10, R5, E5, A10, D10",
                   "modelType": "Generic",
                   "new": false,
                   "number": 115,
-                  "score": ""
+                  "score": "9.2"
                 },
                 {
                   "id": "df87bf93-3b06-4f25-81d1-3391fc453973",
                   "title": "Fuzzing",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Login gibt zu detailierte Fehlermeldungen zurück und erlaubt es zB Nutzernamen zu validieren\nCAPEC-28: Fuzzing\nD6, R7, E8, A 0, D1",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Begrenzte Fehlermeldung, Grey-listing oder blacklisting\nD3AL Account locking\nD2, R4, E1, A0, D1",
                   "modelType": "Generic",
                   "new": false,
                   "number": 120,
@@ -151,18 +151,18 @@
                 {
                   "id": "3d0df006-0b47-4a77-9e76-fc15c245c598",
                   "title": "SD Storage",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Client Daten liegen auf SD Karte zugänglich für alle Apps\nCAPEC-124: Shares ressource manipulation\nT1552.001: Unsecured Credentials: Credentials In Files\nD10, R5, E7, A3, D10",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Verschlüsseln auf device.\nD3-FE File encryption\nMASVS-STORAGE-1 Do not use shared storage for sensitive data.\nD10, R1, E1, A3, D10",
                   "modelType": "Generic",
                   "new": false,
                   "number": 123,
                   "score": "6"
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -183,8 +183,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -203,18 +203,18 @@
                 {
                   "id": "d5cbbbfb-3c1f-4dc3-a176-cbdee4edf797",
                   "title": "Statischer Schlüssel",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Der symmetrische statische Schlüssel liegt unverschlüsselt auf dem Server\nCAPEC-97: Cryptanalysis\nT1552.001: Unsecured Credentials: Credentials In Files\nD - 9, R - 10, E - 9, A - 10, D - 2",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Schlüssel nicht im Klartext abspeichern.\nAsymetrischer Schlüssel auf beiden Seiten.\nD3-CBAN\nD0, R0, E0, A0, D1",
                   "modelType": "Generic",
                   "new": false,
                   "number": 116,
                   "score": ""
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -307,8 +307,8 @@
                 "text": "Allsecure Mobile\nOTT"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -327,18 +327,18 @@
                 {
                   "id": "5459c6a5-1450-4a2f-89f0-794506018e9e",
                   "title": "Telco spoofing",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "Ein Akteur gibt sich als Telco aus und initiiert OTT Versendungen.\nCAPEC-194: Fake the Source of Data\nD - 1, R - 4, E - 3, A - 0, D - 0",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "D3-CBAN Certificate Auth\nD1, R1, E1, A0, D0",
                   "modelType": "Generic",
                   "new": false,
                   "number": 125,
                   "score": "2"
                 }
               ],
-              "hasOpenThreats": true
+              "hasOpenThreats": false
             }
           },
           {
@@ -1598,13 +1598,11 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1622,16 +1620,16 @@
               "storesCredentials": false,
               "isEncrypted": false,
               "isSigned": true,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
                   "id": "d729c300-a307-46cf-ae5d-f7eb350e26f7",
                   "title": "SQL injection",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "in Benutzername oder Passwort hash wird schadhafter code injiziert.\nCAPEC-242: Code Injection\nD - 10, R - 2, E - 5, A - 10, D - 5",
-                  "mitigation": "",
+                  "mitigation": "Stored procedures, Parameter sanitization\nAn jeder möglichen Stelle Parameter validieren und Sonderzeichen escapen verhindert, dass schadhafter Code eingeschleust wird. \nSowohl im Frontend als auch im Backend Parameter Validierung durchführen und ggf. nur bestimmte Zeichen erlauben. (D3-DQSA: Database Query String Analysis)\nRegelmäßige Backups von Datenbanken pflegen (D3-RD: Restore Database).\nD - 5, R - 2, E - 5, A - 5, D - 2 = 4\n\nkein MASVS anwendbar",
                   "modelType": "Generic",
                   "new": false,
                   "number": 114,
@@ -1740,8 +1738,8 @@
                 "text": "Management\n"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1756,16 +1754,16 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "providesAuthentication": false,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
                   "id": "c26ab432-0d8d-4f6e-b2b8-60413e9d2c86",
                   "title": "Social engineering",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Elevation of privilege",
                   "description": "Zugang zum Management Postfach lässt alle Log daten raw einsehen.\nCAPEC-418: Influence Perception of Reciprocation\n\nD - 3, R - 7, E - 8, A - 3, D - 2",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Management jährlich Schulen und reporting mechanismen etablieren.\nneues D3, R7, E8, A1, D1\nkein D3FEND\nkein MASVS",
                   "modelType": "Generic",
                   "new": false,
                   "number": 121,
@@ -1792,8 +1790,8 @@
                 "text": "SIEM"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1808,16 +1806,16 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
                   "id": "28b25bf4-3d6a-4ec4-8b28-40941cb27536",
                   "title": "Verification of Log calls",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Repudiation",
                   "description": "Log Calls der Systeme werden nicht verifiziert und wohlmöglich abgefangen.\nCAPEC-268: Audit log manipulation\nT1557: Adversary-in-the-Middle\nD - 4, R - 5, E - 6, A - 0, D - 4",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Signierte und verschlüsselte Übertragung der Log calls\nD3-MAN Message Authentication\nD4,R2,E3,A0,D0",
                   "modelType": "Generic",
                   "new": false,
                   "number": 124,
@@ -1840,13 +1838,11 @@
                 "text": "Event Store"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1864,16 +1860,16 @@
               "storesCredentials": false,
               "isEncrypted": false,
               "isSigned": false,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
                   "id": "18f6bee6-15a9-46a1-b965-5143c5724c19",
                   "title": "SQL Injection",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Analog zur anderen DB ist auch hier SQL injection möglich.\nin Benutzername oder Passwort hash wird schadhafter code injiziert.\nCAPEC-242: Code Injection\nD - 10, R - 2, E - 5, A - 10, D - 5\n",
-                  "mitigation": "",
+                  "mitigation": "Stored procedures, Parameter sanitization\nAn jeder möglichen Stelle Parameter validieren und Sonderzeichen escapen verhindert, dass schadhafter Code eingeschleust wird. \nSowohl im Frontend als auch im Backend Parameter Validierung durchführen und ggf. nur bestimmte Zeichen erlauben. (D3-DQSA: Database Query String Analysis)\nRegelmäßige Backups von Datenbanken pflegen (D3-RD: Restore Database).\nD - 5, R - 2, E - 5, A - 5, D - 2 = 4\n\nkein MASVS anwendbar",
                   "modelType": "Generic",
                   "new": false,
                   "number": 126,
@@ -1899,15 +1895,15 @@
                 "text": "Monthly export"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
-            "id": "76b5eaf9-5fd9-4dd5-89c6-c1033290fc63",
             "zIndex": 17,
+            "id": "76b5eaf9-5fd9-4dd5-89c6-c1033290fc63",
             "data": {
               "type": "tm.Flow",
               "name": "Monthly export",
@@ -1915,16 +1911,16 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
                   "id": "fa1206ba-25a7-4689-a287-3479ca2047b8",
                   "title": "SMTP ggf unverschlüsselt",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Versand per unverschlüsselter Mail kann abgefangen werden\nCAPEC-158: Sniffing network traffic\nT1557 - Adversary-in-the-Middle\nD - 3, R - 9, E - 5, A - 0, E - 10",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Mail e2e verschlüsseln und signieren\nD1, R4, E0, A0, D10\nD3-MENCR: Message encryption",
                   "modelType": "Generic",
                   "new": false,
                   "number": 122,
