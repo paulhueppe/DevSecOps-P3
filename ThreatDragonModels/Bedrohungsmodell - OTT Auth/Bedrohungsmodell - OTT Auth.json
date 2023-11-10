@@ -7,12 +7,13 @@
   "detail": {
     "contributors": [
       {
-        "name": "Georg Neugebauer",
-        "$$hashKey": "object:14"
+        "name": "Georg Neugebauer"
       },
       {
-        "name": "DevSecOps Kursteilnehmer",
-        "$$hashKey": "object:16"
+        "name": "Paul Hüppe"
+      },
+      {
+        "name": "Lukas Eichenauer"
       }
     ],
     "diagrams": [
@@ -1942,5 +1943,5 @@
     "diagramTop": 10,
     "threatTop": 126
   },
-  "version": "2.1.1"
+  "version": "2.0.9"
 }
