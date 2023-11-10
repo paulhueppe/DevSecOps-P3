@@ -128,7 +128,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Spoofing",
-                  "description": "cookie abfangen und sich dann als der authenifizierte Nutzer ausgeben. Session ist 1 Jahr gültig",
+                  "description": "cookie abfangen und sich dann als der authenifizierte Nutzer ausgeben. Session ist 1 Jahr gültig\nCAPEC-31: HTTP Cookie\nT1539: Steal web session cookie",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
@@ -154,7 +154,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Client Daten liegen auf SD Karte zugänglich für alle Apps",
+                  "description": "Client Daten liegen auf SD Karte zugänglich für alle Apps\nCAPEC-124: Shares ressource manipulation\nT1552.001: Unsecured Credentials: Credentials In Files",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
@@ -206,7 +206,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Der symmetrische statische Schlüssel liegt unverschlüsselt auf dem Server",
+                  "description": "Der symmetrische statische Schlüssel liegt unverschlüsselt auf dem Server\nCAPEC-97: Cryptanalysis\nT1552.001: Unsecured Credentials: Credentials In Files",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
@@ -330,7 +330,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Spoofing",
-                  "description": "Ein Akteur gibt sich als Telco aus und initiiert OTT Versendungen.",
+                  "description": "Ein Akteur gibt sich als Telco aus und initiiert OTT Versendungen.\nCAPEC-194: Fake the Source of Data\n",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
@@ -383,8 +383,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -408,22 +407,8 @@
               "protocol": "",
               "isEncrypted": false,
               "isPublicNetwork": false,
-              "hasOpenThreats": true,
-              "threats": [
-                {
-                  "id": "8907ccf6-6ddc-4184-942c-f10df60fe7d2",
-                  "title": "Partly valid credentials",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Veröffentlichung von Informationen",
-                  "description": "Login gibt zu detailierte Fehlermeldungen zurück und erlaubt es zB Nutzernamen zu validieren\nCAPEC-28: Fuzzing",
-                  "mitigation": "Geben Sie eine Korrekturmaßnahme für diese Bedrohung oder eine Begründung N/A an",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 104,
-                  "score": ""
-                }
-              ],
+              "hasOpenThreats": false,
+              "threats": [],
               "isTrustBoundary": false
             },
             "id": "35f9f840-c060-4c31-bf9a-0e17a95ddf66",
@@ -437,6 +422,10 @@
               "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
             },
             "vertices": [
+              {
+                "x": 190,
+                "y": 60.5
+              },
               {
                 "x": 237,
                 "y": 39
@@ -1775,7 +1764,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Elevation of privilege",
-                  "description": "Zugang zum Management Postfach lässt alle Log daten raw einsehen.",
+                  "description": "Zugang zum Management Postfach lässt alle Log daten raw einsehen.\nCAPEC-418: Influence Perception of Reciprocation",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
@@ -1827,7 +1816,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Repudiation",
-                  "description": "Log Calls der Systeme werden nicht verifiziert und wohlmöglich abgefangen.",
+                  "description": "Log Calls der Systeme werden nicht verifiziert und wohlmöglich abgefangen.\nCAPEC-268: Audit log manipulation\nT1557: Adversary-in-the-Middle\n",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
@@ -1934,12 +1923,12 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Versand per unverschlüsselter Mail kann abgefangen werden",
+                  "description": "Versand per unverschlüsselter Mail kann abgefangen werden\nCAPEC-158: Sniffing network traffic\nT1557 - Adversary-in-the-Middle\nD - 3, R - 9, E - 5, A - 0, E - 10",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
                   "number": 122,
-                  "score": ""
+                  "score": "5.4"
                 }
               ],
               "isBidirectional": false,
