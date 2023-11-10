@@ -20,8 +20,8 @@
         "cells": [
           {
             "position": {
-              "x": 271.9999999999998,
-              "y": -429.9999999999998
+              "x": 238,
+              "y": -409.9999999999998
             },
             "size": {
               "width": 230,
@@ -92,8 +92,8 @@
                 "text": "Login System -\nWebapp +\nMobile App"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -103,13 +103,44 @@
             "id": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa",
             "data": {
               "name": "Login System -\nWebapp +\nMobile App",
-              "description": "Vergleicht eingegebenen OTT-Wert auf Telefon mit erwartetem OTT seitens 2-Faktor-Dienst. ",
-              "type": "tm.Process",
+              "description": "",
+              "type": "tm.Flow",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false
+              "threats": [
+                {
+                  "id": "6ebee8c2-5966-420d-9cc6-c3693d5cdada",
+                  "title": "DDoS",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 112,
+                  "score": ""
+                },
+                {
+                  "id": "629cfdb5-e766-4abe-817b-ab9182fda676",
+                  "title": "Cookie spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "cookie abfangen und sich dann als der authenifizierte Nutzer ausgeben. Session ist 1 Jahr gültig",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 115,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false
             }
           },
           {
@@ -126,8 +157,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -142,8 +173,22 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "id": "d5cbbbfb-3c1f-4dc3-a176-cbdee4edf797",
+                  "title": "Statischer Schlüssel",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Der symmetrische statische Schlüssel liegt unverschlüsselt auf dem Server",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 116,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1189,48 +1234,6 @@
             ]
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Monatlicher Export",
-              "description": "Excel Tabelle E-mail",
-              "outOfScope": false,
-              "isBidirectional": false,
-              "reasonOutOfScope": "",
-              "protocol": "smtp",
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": []
-            },
-            "id": "c509fd31-40d4-4be6-bb01-23c45668493b",
-            "labels": [
-              "Monatlicher Export"
-            ],
-            "source": {
-              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
-            },
-            "target": {
-              "cell": "7af2cfa4-8504-4350-a297-160bf12b2d2e"
-            }
-          },
-          {
             "shape": "trust-broundary-curve",
             "width": 200,
             "height": 100,
@@ -1499,6 +1502,99 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Monatlicher Export",
+              "description": "Excel Tabelle E-mail",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "smtp",
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "c509fd31-40d4-4be6-bb01-23c45668493b",
+            "labels": [
+              "Monatlicher Export"
+            ],
+            "source": {
+              "cell": "76b5eaf9-5fd9-4dd5-89c6-c1033290fc63"
+            },
+            "target": {
+              "cell": "7af2cfa4-8504-4350-a297-160bf12b2d2e"
+            },
+            "vertices": [
+              {
+                "x": 470,
+                "y": -282
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "38f8ed32-db8a-4b12-9355-80c7080f917b",
+            "source": {
+              "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
+            },
+            "target": {
+              "cell": "76b5eaf9-5fd9-4dd5-89c6-c1033290fc63"
+            },
+            "vertices": [
+              {
+                "x": 560,
+                "y": -240
+              }
+            ]
+          },
+          {
             "position": {
               "x": 410,
               "y": -174
@@ -1512,11 +1608,13 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1525,17 +1623,34 @@
             "zIndex": 11,
             "id": "c2716661-ef88-48a8-8d0f-724e1923d562",
             "data": {
-              "type": "tm.Store",
+              "type": "tm.Flow",
               "name": "Log-DB",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "isALog": true,
               "storesCredentials": false,
-              "isEncrypted": true,
+              "isEncrypted": false,
               "isSigned": true,
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "d729c300-a307-46cf-ae5d-f7eb350e26f7",
+                  "title": "SQL injection",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "in Benutzername oder Passwort hash wird schadhafter code injiziert.\nCAPEC-242: Code Injection\nD - 10, R - 2, E - 5, A - 10, D - 5",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 114,
+                  "score": ""
+                }
+              ],
+              "isBidirectional": false,
+              "protocol": "",
+              "isPublicNetwork": false
             }
           },
           {
@@ -1623,8 +1738,8 @@
           },
           {
             "position": {
-              "x": 330.7499999999998,
-              "y": -330
+              "x": 279.74999999999994,
+              "y": -344.9999999999998
             },
             "size": {
               "width": 112.5,
@@ -1732,6 +1847,44 @@
               "hasOpenThreats": false,
               "threats": []
             }
+          },
+          {
+            "position": {
+              "x": 548,
+              "y": -369.9999999999998
+            },
+            "size": {
+              "width": 100,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Monthly export"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "76b5eaf9-5fd9-4dd5-89c6-c1033290fc63",
+            "zIndex": 17,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Monthly export",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false
+            }
           }
         ],
         "version": "2.1.1",
@@ -1744,7 +1897,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 108
+    "threatTop": 119
   },
-  "version": "2.0.9"
+  "version": "2.1.1"
 }
