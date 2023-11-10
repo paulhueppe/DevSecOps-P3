@@ -115,12 +115,12 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Denial of service",
-                  "description": "Ein Akteur kann durch übermäßige Anfragen das Login System zum erliegen bringen.\nCAPEC-482: TCP Flood\nT1499: Endpoint Denial of Service",
+                  "description": "Ein Akteur kann durch übermäßige Anfragen das Login System zum erliegen bringen.\nCAPEC-482: TCP Flood\nT1499: Endpoint Denial of Service\nD9, R9, E10, A10, D1",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
                   "number": 112,
-                  "score": ""
+                  "score": "7.8"
                 },
                 {
                   "id": "629cfdb5-e766-4abe-817b-ab9182fda676",
@@ -141,12 +141,12 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Login gibt zu detailierte Fehlermeldungen zurück und erlaubt es zB Nutzernamen zu validieren\nCAPEC-28: Fuzzing",
+                  "description": "Login gibt zu detailierte Fehlermeldungen zurück und erlaubt es zB Nutzernamen zu validieren\nCAPEC-28: Fuzzing\nD6, R7, E8, A 0, D1",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
                   "number": 120,
-                  "score": ""
+                  "score": "4.4"
                 },
                 {
                   "id": "3d0df006-0b47-4a77-9e76-fc15c245c598",
@@ -154,12 +154,12 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Client Daten liegen auf SD Karte zugänglich für alle Apps\nCAPEC-124: Shares ressource manipulation\nT1552.001: Unsecured Credentials: Credentials In Files",
+                  "description": "Client Daten liegen auf SD Karte zugänglich für alle Apps\nCAPEC-124: Shares ressource manipulation\nT1552.001: Unsecured Credentials: Credentials In Files\nD10, R5, E7, A3, D10",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
                   "number": 123,
-                  "score": ""
+                  "score": "6"
                 }
               ],
               "hasOpenThreats": true,
@@ -206,7 +206,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Der symmetrische statische Schlüssel liegt unverschlüsselt auf dem Server\nCAPEC-97: Cryptanalysis\nT1552.001: Unsecured Credentials: Credentials In Files",
+                  "description": "Der symmetrische statische Schlüssel liegt unverschlüsselt auf dem Server\nCAPEC-97: Cryptanalysis\nT1552.001: Unsecured Credentials: Credentials In Files\nD - 9, R - 10, E - 9, A - 10, D - 2",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
@@ -330,12 +330,12 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Spoofing",
-                  "description": "Ein Akteur gibt sich als Telco aus und initiiert OTT Versendungen.\nCAPEC-194: Fake the Source of Data\n",
+                  "description": "Ein Akteur gibt sich als Telco aus und initiiert OTT Versendungen.\nCAPEC-194: Fake the Source of Data\nD - 1, R - 4, E - 3, A - 0, D - 0",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
                   "number": 125,
-                  "score": ""
+                  "score": "2"
                 }
               ],
               "hasOpenThreats": true
@@ -1764,12 +1764,12 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Elevation of privilege",
-                  "description": "Zugang zum Management Postfach lässt alle Log daten raw einsehen.\nCAPEC-418: Influence Perception of Reciprocation",
+                  "description": "Zugang zum Management Postfach lässt alle Log daten raw einsehen.\nCAPEC-418: Influence Perception of Reciprocation\n\nD - 3, R - 7, E - 8, A - 3, D - 2",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
                   "number": 121,
-                  "score": ""
+                  "score": "4.6"
                 }
               ],
               "isBidirectional": false,
@@ -1816,12 +1816,12 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Repudiation",
-                  "description": "Log Calls der Systeme werden nicht verifiziert und wohlmöglich abgefangen.\nCAPEC-268: Audit log manipulation\nT1557: Adversary-in-the-Middle\n",
+                  "description": "Log Calls der Systeme werden nicht verifiziert und wohlmöglich abgefangen.\nCAPEC-268: Audit log manipulation\nT1557: Adversary-in-the-Middle\nD - 4, R - 5, E - 6, A - 0, D - 4",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
                   "number": 124,
-                  "score": ""
+                  "score": "3.8"
                 }
               ]
             }
