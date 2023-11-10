@@ -147,6 +147,19 @@
                   "new": false,
                   "number": 120,
                   "score": ""
+                },
+                {
+                  "id": "3d0df006-0b47-4a77-9e76-fc15c245c598",
+                  "title": "SD Storage",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Client Daten liegen auf SD Karte zugänglich für alle Apps",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 123,
+                  "score": ""
                 }
               ],
               "hasOpenThreats": true,
@@ -1897,8 +1910,8 @@
                 "text": "Monthly export"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1913,8 +1926,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "fa1206ba-25a7-4689-a287-3479ca2047b8",
+                  "title": "SMTP ggf unverschlüsselt",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Versand per unverschlüsselter Mail kann abgefangen werden",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 122,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1932,7 +1959,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 121
+    "threatTop": 123
   },
   "version": "2.1.1"
 }
