@@ -33,8 +33,8 @@
                 "text": "Allsecure\nManagement"
               }
             },
-            "id": "f928ac41-d1f4-454e-a304-db3c907ec96a",
             "zIndex": -1,
+            "id": "f928ac41-d1f4-454e-a304-db3c907ec96a",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Allsecure\nManagement",
@@ -1173,15 +1173,15 @@
               "threats": []
             },
             "id": "c509fd31-40d4-4be6-bb01-23c45668493b",
+            "labels": [
+              "Monatlicher Export"
+            ],
             "source": {
               "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
             },
             "target": {
               "cell": "7af2cfa4-8504-4350-a297-160bf12b2d2e"
-            },
-            "labels": [
-              "Monatlicher Export"
-            ]
+            }
           },
           {
             "shape": "trust-broundary-curve",
@@ -1289,15 +1289,15 @@
               "threats": []
             },
             "id": "632761f9-5899-4147-8e10-79effdc23e2b",
+            "labels": [
+              "Logging"
+            ],
             "source": {
               "cell": "fde3637b-f867-406a-ad16-e4fae24c88d5"
             },
             "target": {
               "cell": "13bf8c2a-ff21-419b-9a12-97305b1f694d"
-            },
-            "labels": [
-              "Logging"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1331,6 +1331,9 @@
               "threats": []
             },
             "id": "8edbc214-36c1-4d3a-82a2-498ebb32d9de",
+            "labels": [
+              "SIEM Logging"
+            ],
             "source": {
               "cell": "8055dd60-0b8b-4b7d-963e-f6d196408ee1"
             },
@@ -1346,9 +1349,6 @@
                 "x": 360,
                 "y": 300
               }
-            ],
-            "labels": [
-              "SIEM Logging"
             ]
           },
           {
@@ -1383,6 +1383,9 @@
               "threats": []
             },
             "id": "c92478f9-7a94-4280-966d-6b27385c1925",
+            "labels": [
+              "SIEM Logging"
+            ],
             "source": {
               "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
             },
@@ -1394,9 +1397,6 @@
                 "x": 480,
                 "y": 250
               }
-            ],
-            "labels": [
-              "SIEM Logging"
             ]
           },
           {
@@ -1431,6 +1431,9 @@
               "threats": []
             },
             "id": "30204532-0159-4889-a4da-3c206c94b971",
+            "labels": [
+              "wö. Bericht"
+            ],
             "source": {
               "cell": "fde3637b-f867-406a-ad16-e4fae24c88d5"
             },
@@ -1446,9 +1449,6 @@
                 "x": 240,
                 "y": -130
               }
-            ],
-            "labels": [
-              "wö. Bericht"
             ]
           },
           {
@@ -1595,8 +1595,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "7af2cfa4-8504-4350-a297-160bf12b2d2e",
             "zIndex": 14,
+            "id": "7af2cfa4-8504-4350-a297-160bf12b2d2e",
             "data": {
               "type": "tm.Flow",
               "name": "Management\n",
@@ -1633,8 +1633,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "fde3637b-f867-406a-ad16-e4fae24c88d5",
             "zIndex": 15,
+            "id": "fde3637b-f867-406a-ad16-e4fae24c88d5",
             "data": {
               "type": "tm.Process",
               "name": "SIEM",
@@ -1670,8 +1670,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "13bf8c2a-ff21-419b-9a12-97305b1f694d",
             "zIndex": 16,
+            "id": "13bf8c2a-ff21-419b-9a12-97305b1f694d",
             "data": {
               "type": "tm.Store",
               "name": "Event Store",
