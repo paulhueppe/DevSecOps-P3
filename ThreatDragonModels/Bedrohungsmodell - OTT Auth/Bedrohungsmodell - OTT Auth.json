@@ -33,8 +33,8 @@
                 "text": "Allsecure\nManagement"
               }
             },
-            "id": "f928ac41-d1f4-454e-a304-db3c907ec96a",
             "zIndex": -1,
+            "id": "f928ac41-d1f4-454e-a304-db3c907ec96a",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Allsecure\nManagement",
@@ -298,7 +298,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -314,7 +315,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "1. Auth Challenge",
+              "name": "Login",
               "description": "",
               "outOfScope": false,
               "isBidirectional": false,
@@ -322,20 +323,66 @@
               "protocol": "",
               "isEncrypted": false,
               "isPublicNetwork": false,
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "d822861e-aa9d-40c3-938a-6c86d6f452a1",
+                  "title": "DDoS",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Ein Akteur kann durch übermäßige Anfragen das Login System zum erliegen bringen.\nCAPEC-482: TCP Flood\nT1499: Endpoint Denial of Service\n",
+                  "mitigation": "Geben Sie eine Korrekturmaßnahme für diese Bedrohung oder eine Begründung N/A an",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 101,
+                  "score": ""
+                },
+                {
+                  "id": "853fab3a-cd28-4dca-8ead-69bc6932aa32",
+                  "title": "Phishing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Manipulation",
+                  "description": "Ein Akteur kann eine gleich aussehende Seite zum Abfangen der Benutzerdaten betreiben.\nCAPEC-98: Phishing\nT1566: Phishing",
+                  "mitigation": "Geben Sie eine Korrekturmaßnahme für diese Bedrohung oder eine Begründung N/A an",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 102,
+                  "score": ""
+                },
+                {
+                  "id": "8907ccf6-6ddc-4184-942c-f10df60fe7d2",
+                  "title": "Partly valid credentials",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Veröffentlichung von Informationen",
+                  "description": "Login gibt zu detailierte Fehlermeldungen zurück und erlaubt es zB Nutzernamen zu validieren\nCAPEC-28: Fuzzing",
+                  "mitigation": "Geben Sie eine Korrekturmaßnahme für diese Bedrohung oder eine Begründung N/A an",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 104,
+                  "score": ""
+                },
+                {
+                  "id": "f0f88c0b-ac66-4e2a-8dcc-c2a19e9c3065",
+                  "title": "SQL Injection",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Manipulation",
+                  "description": "in Benutzername oder Passwort hash wird schadhafter code injiziert.\nCAPEC-242: Code Injection\nD - 10, R - 2, E - 5, A - 10, D - 5\n",
+                  "mitigation": "An jeder möglichen Stelle Parameter validieren und Sonderzeichen escapen verhindert, dass schadhafter Code eingeschleust wird. \nSowohl im Frontend als auch im Backend Parameter Validierung durchführen und ggf. nur bestimmte Zeichen erlauben. (D3-DQSA: Database Query String Analysis)\nRegelmäßige Backups von Datenbanken pflegen (D3-RD: Restore Database).\nD - 5, R - 2, E - 5, A - 5, D - 2 = 4\n\nkein MASVS anwendbar",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 106,
+                  "score": "6.4"
+                }
+              ],
               "isTrustBoundary": false
             },
             "id": "35f9f840-c060-4c31-bf9a-0e17a95ddf66",
             "labels": [
-              {
-                "position": 0.5,
-                "attrs": {
-                  "label": {
-                    "text": "Login"
-                  }
-                }
-              }
+              "Login"
             ],
             "source": {
               "cell": "dec51efb-bf55-4b9c-a294-0e45f4e823f6"
@@ -1173,15 +1220,15 @@
               "threats": []
             },
             "id": "c509fd31-40d4-4be6-bb01-23c45668493b",
+            "labels": [
+              "Monatlicher Export"
+            ],
             "source": {
               "cell": "c2716661-ef88-48a8-8d0f-724e1923d562"
             },
             "target": {
               "cell": "7af2cfa4-8504-4350-a297-160bf12b2d2e"
-            },
-            "labels": [
-              "Monatlicher Export"
-            ]
+            }
           },
           {
             "shape": "trust-broundary-curve",
@@ -1289,15 +1336,15 @@
               "threats": []
             },
             "id": "632761f9-5899-4147-8e10-79effdc23e2b",
+            "labels": [
+              "Logging"
+            ],
             "source": {
               "cell": "fde3637b-f867-406a-ad16-e4fae24c88d5"
             },
             "target": {
               "cell": "13bf8c2a-ff21-419b-9a12-97305b1f694d"
-            },
-            "labels": [
-              "Logging"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1331,6 +1378,9 @@
               "threats": []
             },
             "id": "8edbc214-36c1-4d3a-82a2-498ebb32d9de",
+            "labels": [
+              "SIEM Logging"
+            ],
             "source": {
               "cell": "8055dd60-0b8b-4b7d-963e-f6d196408ee1"
             },
@@ -1346,9 +1396,6 @@
                 "x": 360,
                 "y": 300
               }
-            ],
-            "labels": [
-              "SIEM Logging"
             ]
           },
           {
@@ -1383,6 +1430,9 @@
               "threats": []
             },
             "id": "c92478f9-7a94-4280-966d-6b27385c1925",
+            "labels": [
+              "SIEM Logging"
+            ],
             "source": {
               "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
             },
@@ -1394,9 +1444,6 @@
                 "x": 480,
                 "y": 250
               }
-            ],
-            "labels": [
-              "SIEM Logging"
             ]
           },
           {
@@ -1431,6 +1478,9 @@
               "threats": []
             },
             "id": "30204532-0159-4889-a4da-3c206c94b971",
+            "labels": [
+              "wö. Bericht"
+            ],
             "source": {
               "cell": "fde3637b-f867-406a-ad16-e4fae24c88d5"
             },
@@ -1446,9 +1496,6 @@
                 "x": 240,
                 "y": -130
               }
-            ],
-            "labels": [
-              "wö. Bericht"
             ]
           },
           {
@@ -1595,8 +1642,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "7af2cfa4-8504-4350-a297-160bf12b2d2e",
             "zIndex": 14,
+            "id": "7af2cfa4-8504-4350-a297-160bf12b2d2e",
             "data": {
               "type": "tm.Flow",
               "name": "Management\n",
@@ -1633,8 +1680,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "fde3637b-f867-406a-ad16-e4fae24c88d5",
             "zIndex": 15,
+            "id": "fde3637b-f867-406a-ad16-e4fae24c88d5",
             "data": {
               "type": "tm.Process",
               "name": "SIEM",
@@ -1670,8 +1717,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "13bf8c2a-ff21-419b-9a12-97305b1f694d",
             "zIndex": 16,
+            "id": "13bf8c2a-ff21-419b-9a12-97305b1f694d",
             "data": {
               "type": "tm.Store",
               "name": "Event Store",
@@ -1696,7 +1743,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 100
+    "threatTop": 108
   },
   "version": "2.1.1"
 }
