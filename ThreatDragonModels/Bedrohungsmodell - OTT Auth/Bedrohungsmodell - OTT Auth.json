@@ -115,7 +115,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Denial of service",
-                  "description": "Provide a description for this threat",
+                  "description": "Ein Akteur kann durch übermäßige Anfragen das Login System zum erliegen bringen.\nCAPEC-482: TCP Flood\nT1499: Endpoint Denial of Service",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
@@ -307,8 +307,8 @@
                 "text": "Allsecure Mobile\nOTT"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -323,8 +323,22 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false
+              "threats": [
+                {
+                  "id": "5459c6a5-1450-4a2f-89f0-794506018e9e",
+                  "title": "Telco spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Ein Akteur gibt sich als Telco aus und initiiert OTT Versendungen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 125,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true
             }
           },
           {
@@ -397,32 +411,6 @@
               "hasOpenThreats": true,
               "threats": [
                 {
-                  "id": "d822861e-aa9d-40c3-938a-6c86d6f452a1",
-                  "title": "DDoS",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Denial of service",
-                  "description": "Ein Akteur kann durch übermäßige Anfragen das Login System zum erliegen bringen.\nCAPEC-482: TCP Flood\nT1499: Endpoint Denial of Service\n",
-                  "mitigation": "Geben Sie eine Korrekturmaßnahme für diese Bedrohung oder eine Begründung N/A an",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 101,
-                  "score": ""
-                },
-                {
-                  "id": "853fab3a-cd28-4dca-8ead-69bc6932aa32",
-                  "title": "Phishing",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Manipulation",
-                  "description": "Ein Akteur kann eine gleich aussehende Seite zum Abfangen der Benutzerdaten betreiben.\nCAPEC-98: Phishing\nT1566: Phishing",
-                  "mitigation": "Geben Sie eine Korrekturmaßnahme für diese Bedrohung oder eine Begründung N/A an",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 102,
-                  "score": ""
-                },
-                {
                   "id": "8907ccf6-6ddc-4184-942c-f10df60fe7d2",
                   "title": "Partly valid credentials",
                   "status": "Open",
@@ -434,19 +422,6 @@
                   "new": false,
                   "number": 104,
                   "score": ""
-                },
-                {
-                  "id": "f0f88c0b-ac66-4e2a-8dcc-c2a19e9c3065",
-                  "title": "SQL Injection",
-                  "status": "Mitigated",
-                  "severity": "High",
-                  "type": "Manipulation",
-                  "description": "in Benutzername oder Passwort hash wird schadhafter code injiziert.\nCAPEC-242: Code Injection\nD - 10, R - 2, E - 5, A - 10, D - 5\n",
-                  "mitigation": "An jeder möglichen Stelle Parameter validieren und Sonderzeichen escapen verhindert, dass schadhafter Code eingeschleust wird. \nSowohl im Frontend als auch im Backend Parameter Validierung durchführen und ggf. nur bestimmte Zeichen erlauben. (D3-DQSA: Database Query String Analysis)\nRegelmäßige Backups von Datenbanken pflegen (D3-RD: Restore Database).\nD - 5, R - 2, E - 5, A - 5, D - 2 = 4\n\nkein MASVS anwendbar",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 106,
-                  "score": "6.4"
                 }
               ],
               "isTrustBoundary": false
@@ -462,14 +437,6 @@
               "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
             },
             "vertices": [
-              {
-                "x": 200,
-                "y": 39
-              },
-              {
-                "x": 220,
-                "y": 40
-              },
               {
                 "x": 237,
                 "y": 39
@@ -1675,11 +1642,11 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "in Benutzername oder Passwort hash wird schadhafter code injiziert.\nCAPEC-242: Code Injection\nD - 10, R - 2, E - 5, A - 10, D - 5",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "",
                   "modelType": "Generic",
                   "new": false,
                   "number": 114,
-                  "score": ""
+                  "score": "6.4"
                 }
               ],
               "isBidirectional": false,
@@ -1836,8 +1803,8 @@
                 "text": "SIEM"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1852,14 +1819,28 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "28b25bf4-3d6a-4ec4-8b28-40941cb27536",
+                  "title": "Verification of Log calls",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Log Calls der Systeme werden nicht verifiziert und wohlmöglich abgefangen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 124,
+                  "score": ""
+                }
+              ]
             }
           },
           {
             "position": {
-              "x": 81,
-              "y": 305
+              "x": 100,
+              "y": 320
             },
             "size": {
               "width": 120,
@@ -1870,11 +1851,13 @@
                 "text": "Event Store"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1883,7 +1866,7 @@
             "zIndex": 16,
             "id": "13bf8c2a-ff21-419b-9a12-97305b1f694d",
             "data": {
-              "type": "tm.Store",
+              "type": "tm.Flow",
               "name": "Event Store",
               "description": "",
               "outOfScope": false,
@@ -1892,8 +1875,25 @@
               "storesCredentials": false,
               "isEncrypted": false,
               "isSigned": false,
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "18f6bee6-15a9-46a1-b965-5143c5724c19",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Analog zur anderen DB ist auch hier SQL injection möglich.\nin Benutzername oder Passwort hash wird schadhafter code injiziert.\nCAPEC-242: Code Injection\nD - 10, R - 2, E - 5, A - 10, D - 5\n",
+                  "mitigation": "",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 126,
+                  "score": ""
+                }
+              ],
+              "isBidirectional": false,
+              "protocol": "",
+              "isPublicNetwork": false
             }
           },
           {
@@ -1959,7 +1959,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 123
+    "threatTop": 126
   },
   "version": "2.1.1"
 }
